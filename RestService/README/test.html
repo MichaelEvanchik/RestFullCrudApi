@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>UploadingWCF REST API</title>
+    <script type="text/javascript">
+
+        function uploadFile(blobOrFile) {
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST', 'http://localhost:35798/RestServiceImpl.svc/api/CreatePhoto/', true);
+
+            xhr.setRequestHeader('Content-length', blobOrFile.size);
+
+            xhr.onload = function (e) {
+                progressBar.value = 0;
+                progressBar.textContent = progressBar.value;
+            };
+
+            // Listen to the upload progress.
+            var progressBar = document.querySelector('progress');
+            xhr.upload.onprogress = function(e) {
+                if (e.lengthComputable) {
+                    progressBar.value = (e.loaded / e.total) * 100;
+                    progressBar.textContent = progressBar.value; // Fallback.
+                }
+            };
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    alert(xhr.responseText);
+                }
+            };
+
+            xhr.send(blobOrFile);
+        }
+
+    </script>
+</head>
+<body>
+    <input id="filePicker" type="file" name="Package" accept="image/*"/>
+    <br />
+    <progress min="0" max="100" value="0">0% complete</progress>
+    <br />
+    <button title="upload" 
+            onclick="if (filePicker.files[0]) uploadFile(filePicker.files[0])">
+        <span>Upload</span>
+    </button>
+</body>
+</html> 

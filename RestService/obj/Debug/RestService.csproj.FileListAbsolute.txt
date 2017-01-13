@@ -1,0 +1,10 @@
+C:\Users\mevanchik\Downloads\RestService\RestService\bin\RestService.dll.config
+C:\Users\mevanchik\Downloads\RestService\RestService\bin\RestService.dll
+C:\Users\mevanchik\Downloads\RestService\RestService\bin\RestService.pdb
+C:\Users\mevanchik\Downloads\RestService\RestService\obj\Debug\RestService.csprojResolveAssemblyReference.cache
+C:\Users\mevanchik\Downloads\RestService\RestService\obj\Debug\RestService.dll
+C:\Users\mevanchik\Downloads\RestService\RestService\obj\Debug\RestService.pdb
+C:\Users\mevanchik\Downloads\RestService\RestService\bin\EntityFramework.dll
+C:\Users\mevanchik\Downloads\RestService\RestService\bin\EntityFramework.SqlServer.dll
+C:\Users\mevanchik\Downloads\RestService\RestService\bin\EntityFramework.xml
+C:\Users\mevanchik\Downloads\RestService\RestService\bin\EntityFramework.SqlServer.xml
